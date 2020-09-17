@@ -1,0 +1,17 @@
+<h1>Mostrando resultados para: <small>{{ searchQuery }}</small></h1>
+<hr>
+
+<div class="row">
+
+    <div class="col-md-12 animated fadeIn fast" *ngIf="heroes.length == 0">
+        <div class="alert alert-primary" role="alert">
+            No existen resultados para la búsqueda: {{ searchQuery }}
+        </div>
+    </div>
+</div>
+
+<div class="card-columns">
+
+    <app-heroe-card (heroeSeleccionado)="verHeroe( $event )" *ngFor="let item of heroes; let i = index;" [heroe]="item" [idx]="i"></app-heroe-card>
+
+</div>

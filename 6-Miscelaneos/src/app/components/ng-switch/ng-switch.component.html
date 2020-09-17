@@ -1,0 +1,39 @@
+<h1 class="mt-5">ngSwitch - Múltiples opciones con una sola decisión</h1>
+
+<div [ngSwitch]="alerta" class="mt-3">
+    <div *ngSwitchCase="'primary'" class="alert alert-primary" role="alert">
+        A simple primary alert—check it out!
+    </div>
+    <div *ngSwitchCase="'secondary'" class="alert alert-secondary" role="alert">
+        A simple secondary alert—check it out!
+    </div>
+    <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+    </div>
+    <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+        A simple warning alert—check it out!
+    </div>
+    <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+        A simple info alert—check it out!
+    </div>
+    <div *ngSwitchCase="'light'" class="alert alert-light" role="alert">
+        A simple light alert—check it out!
+    </div>
+    <div *ngSwitchCase="'dark'" class="alert alert-dark" role="alert">
+        A simple dark alert—check it out!
+    </div>
+    <div *ngSwitchDefault class="alert alert-danger" role="alert">
+        A simple danger alert—check it out!
+    </div>
+</div>
+
+<div class="btn-group mb-5" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-primary" (click)="alerta='primary'">Primary</button>
+    <button type="button" class="btn btn-secondary" (click)="alerta='secondary'">Secondary</button>
+    <button type="button" class="btn btn-success" (click)="alerta='success'">Success</button>
+    <button type="button" class="btn btn-danger" (click)="alerta='danger'">Danger</button>
+    <button type="button" class="btn btn-warning" (click)="alerta='warning'">Warning</button>
+    <button type="button" class="btn btn-info" (click)="alerta='info'">Info</button>
+    <button type="button" class="btn btn-light" (click)="alerta='light'">Light</button>
+    <button type="button" class="btn btn-dark" (click)="alerta='dark'">Dark</button>
+</div>
